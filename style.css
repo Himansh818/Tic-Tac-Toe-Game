@@ -1,0 +1,127 @@
+* {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      overflow: hidden;
+      box-sizing: border-box;
+      text-align: center;
+      background: radial-gradient(green,rgb(108, 203, 184), rgba(4, 0, 255, 0.609));
+    }
+    main{
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+    .container {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    h1{
+      position: relative;
+      top: 10px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      color: rgb(46, 83, 72);
+      font-size: 50px;
+      font-weight: bolder;
+      animation: dance 1s alternate-reverse infinite;
+    }
+    @keyframes dance {
+      0%{
+        transform: translateY(12px);
+      }100%{
+        transform: translateY(0px);
+      }
+    }
+
+    .game {
+      bottom: 50px;
+      position: relative;
+      height: 60vmin;
+      width: 60vmin;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5vmin;
+    }
+
+
+    @keyframes fadeIn {
+      0%{
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      100%{
+        opacity: 1;
+        transform: translateY(0px);
+      }
+    }
+    .box {
+      animation: fadeIn 1s ease-in forwards;
+      background-color: white;
+      height: 18vmin;
+      width: 18vmin;
+      border: none;
+      border-radius: 1rem;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.87);
+      font-size: 4rem;
+      color: red;
+      text-shadow: 0 0 10px blue;
+    }
+    .box:hover {
+      height: 19vmin;
+      width: 19vmin;
+      background-color: rgb(113, 175, 211);
+    }
+    #reset {
+      background-color: black;
+      color: white;
+      padding: 15px;
+      border-radius: 20px;
+      cursor: pointer;
+      position: relative;
+      bottom: 130px;
+      width: fit-content;
+      left: 47vw;
+      transition: all 0.2s;
+    }#reset:active{
+      transform: scale(0.9);
+    }#reset:hover{
+      transform: scale(1.1);
+      font-weight: 700;
+    }
+    #new-btn {
+      background-color: black;
+      color: white;
+      padding: 15px;
+      height: fit-content;
+      border-radius: 20px;
+      cursor: pointer;
+    }#new-btn:active{
+      transform: scale(0.9);
+    }#new-btn:hover{
+      transform: scale(1.1);
+      font-weight: 700;
+    }
+    #msg {
+      color: rgb(251, 239, 16);
+      font-size: 8vmin;
+      font-weight: bolder;
+      box-shadow: 10px 10px 10px yellowgreen;
+      animation: dance 1s alternate-reverse infinite;
+    }
+    .msg-container {
+      height: 100vmin;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 40px;
+    }
+    .hide {
+      display: none;
+    }
